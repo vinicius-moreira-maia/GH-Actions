@@ -1,17 +1,18 @@
-name: Greetings
+name: Greetings # nome
 
-on: [pull_request_target, issues]
+on: [pull_request_target, issues] # eventos
 
+# jobs
 jobs:
-  greeting:
-    runs-on: ubuntu-latest
+  greeting: # job 1
+    runs-on: ubuntu-latest # runner
     permissions:
       issues: write
       pull-requests: write
-    steps:
+    steps: # passos
     # https://github.com/actions/first-interaction
-    - uses: actions/first-interaction@v1
-      with:
+    - uses: actions/first-interaction@v1 # ação é um programa (contido num repositório)
+      with: # esses são os dados de entrada para a action (que é um programa)
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         issue-message: "Message that will be displayed on users' first issue"
         pr-message: "Message that will be displayed on users' first pull request"
