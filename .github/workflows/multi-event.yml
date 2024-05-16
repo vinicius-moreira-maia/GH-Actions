@@ -1,0 +1,22 @@
+# executa em todo push na branch main e dev
+# executa em todo pull request da branch main
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  hello_world: # nome do job
+    runs-on: ubuntu-latest # runner
+    steps: # passo 1
+      - name: "Echo Basic Information" # nome do passo
+        # imprimir as seguintes variáveis de ambiente
+        run: |
+          echo "REF: $GITHUB_REF"
+          echo "Job ID: $GITHUB_JOB"
+          echo "Action: $GITHUB_ACTION"
+          echo "Actor: $GITHUB_ACTOR"
