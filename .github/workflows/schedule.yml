@@ -9,4 +9,6 @@ jobs:
     runs-on: ubuntu-latest # runner
     steps: # passo 1
       - name: Echo current time # nome do passo 1
-        run: echo "The current server time is $(date)" # exibe variável de ambiente
+
+        # exibe variável de ambiente
+        run: echo "The current server time is $(date)" 
