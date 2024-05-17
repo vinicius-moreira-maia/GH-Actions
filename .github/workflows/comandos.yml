@@ -1,0 +1,15 @@
+name: Workflow para testar comandos
+
+on: [push]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: saida_valor
+        id: passo_1
+        run: echo "result=testando comandos" >> $GITHUB_OUTPUT
+    
+      - name: exibir_saida
+        run: "echo 'Saída: ${{steps.passo_1.outputs.result}}'"
