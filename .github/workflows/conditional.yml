@@ -1,14 +1,20 @@
 name: example-workflow
+
+# evento disparador
 on: [push]
+
 jobs:
+  # job 1
   hello-world:
     if: github.repository == 'octo-org/octo-repo-prod'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # runner
     steps:
       - name: "Hello World"
-        run:  echo "Hello World!"
+        run:  echo "Hello World!" # o run executa comandos de shell no runner do GitHub
+  
+  # job 2
   goodbye-moon:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # runner
     steps:
       - name: "Goodbye Moon"
         run:  echo "Goodbye Moon!"
