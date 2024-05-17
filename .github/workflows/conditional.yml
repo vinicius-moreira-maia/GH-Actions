@@ -6,7 +6,7 @@ on: [push]
 jobs:
   # job 1
   hello-world:
-    if: github.repository == 'octo-org/octo-repo-prod'
+    if: github.repository == 'vinicius-moreira-maia/GH-Actions'
     runs-on: ubuntu-latest # runner
     steps:
       - name: "Hello World"
